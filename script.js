@@ -1,31 +1,723 @@
-const PROJECTS = [{"src": "assets/project-01.webp", "title": "Recent Projects", "category": "Recent Projects", "alt": "Recent Projects project in Huddersfield and surrounding areas", "original": "a_professionally_designed_promotional_advertisemen.png"}, {"src": "assets/project-02.webp", "title": "Fencing Installation", "category": "Fencing & Decking", "alt": "Fencing Installation project in Huddersfield and surrounding areas", "original": "a_professional_advertising_collage_poster_for_fenc.png"}, {"src": "assets/project-03.webp", "title": "Garden Maintenance", "category": "Garden Maintenance", "alt": "Garden Maintenance project in Huddersfield and surrounding areas", "original": "a_professional_promotional_collage_for_garden_and.png"}, {"src": "assets/project-04.webp", "title": "Recent Projects", "category": "Recent Projects", "alt": "Recent Projects project in Huddersfield and surrounding areas", "original": "a_high_quality_professional_before_and_after_photo.png"}, {"src": "assets/project-05.webp", "title": "Recent Projects", "category": "Recent Projects", "alt": "Recent Projects project in Huddersfield and surrounding areas", "original": "01340DCA-DC73-4E8F-AD1F-C28F51C59328.jpeg"}, {"src": "assets/project-06.webp", "title": "Recent Projects", "category": "Recent Projects", "alt": "Recent Projects project in Huddersfield and surrounding areas", "original": "0EBC015E-C0EA-4262-B1D6-85FFAFB1FE28.jpeg"}, {"src": "assets/project-07.webp", "title": "Recent Projects", "category": "Recent Projects", "alt": "Recent Projects project in Huddersfield and surrounding areas", "original": "11CE2E95-ED5F-4ED2-B13A-DF20BF863884.jpeg"}, {"src": "assets/project-08.webp", "title": "Recent Projects", "category": "Recent Projects", "alt": "Recent Projects project in Huddersfield and surrounding areas", "original": "1cb194a7-df59-4251-9dd0-ec9c88db1b43.jpeg"}, {"src": "assets/project-09.webp", "title": "Recent Projects", "category": "Recent Projects", "alt": "Recent Projects project in Huddersfield and surrounding areas", "original": "346C9FAF-C8B4-494F-961B-85708635B4CF.jpeg"}, {"src": "assets/project-10.webp", "title": "Recent Projects", "category": "Recent Projects", "alt": "Recent Projects project in Huddersfield and surrounding areas", "original": "3AD20130-B60B-4DA1-B3C5-C19463D647C0.jpeg"}, {"src": "assets/project-11.webp", "title": "Recent Projects", "category": "Recent Projects", "alt": "Recent Projects project in Huddersfield and surrounding areas", "original": "3d9635c0-bfc7-46ad-9cb5-33a393852c31.jpeg"}, {"src": "assets/project-12.webp", "title": "Recent Projects", "category": "Recent Projects", "alt": "Recent Projects project in Huddersfield and surrounding areas", "original": "45D58007-BB5D-496E-BB67-20D135EA367E.jpeg"}, {"src": "assets/project-13.webp", "title": "Recent Projects", "category": "Recent Projects", "alt": "Recent Projects project in Huddersfield and surrounding areas", "original": "4870AF54-8D49-463B-B187-9939368140CF.jpeg"}, {"src": "assets/project-14.webp", "title": "Recent Projects", "category": "Recent Projects", "alt": "Recent Projects project in Huddersfield and surrounding areas", "original": "552d22fd-43ed-42e5-a593-c2e49572df1c.jpeg"}, {"src": "assets/project-15.webp", "title": "Recent Projects", "category": "Recent Projects", "alt": "Recent Projects project in Huddersfield and surrounding areas", "original": "5d27de42-f6a1-4f9d-bf38-b7609b6f56ba.jpeg"}, {"src": "assets/project-16.webp", "title": "Recent Projects", "category": "Recent Projects", "alt": "Recent Projects project in Huddersfield and surrounding areas", "original": "62da9902-f6aa-4b1a-a73b-32817bb610e9.jpeg"}, {"src": "assets/project-17.webp", "title": "Recent Projects", "category": "Recent Projects", "alt": "Recent Projects project in Huddersfield and surrounding areas", "original": "8A394415-2B10-4FC2-B084-BB297AF77068.jpeg"}, {"src": "assets/project-18.webp", "title": "Recent Projects", "category": "Recent Projects", "alt": "Recent Projects project in Huddersfield and surrounding areas", "original": "8B873D69-8023-4227-BCBE-190364086E7B.jpeg"}, {"src": "assets/project-19.webp", "title": "Recent Projects", "category": "Recent Projects", "alt": "Recent Projects project in Huddersfield and surrounding areas", "original": "8DD86EF3-DA43-41F6-9CF1-20BFDC6C81EB.jpeg"}, {"src": "assets/project-20.webp", "title": "Recent Projects", "category": "Recent Projects", "alt": "Recent Projects project in Huddersfield and surrounding areas", "original": "95b16efb-a7c8-40ba-b1d7-04cf29d5f194.jpeg"}, {"src": "assets/project-21.webp", "title": "Recent Projects", "category": "Recent Projects", "alt": "Recent Projects project in Huddersfield and surrounding areas", "original": "A051F0F0-72CA-414C-A1BF-A0DA32A17EAA.jpeg"}, {"src": "assets/project-22.webp", "title": "Garden Maintenance", "category": "Garden Maintenance", "alt": "Garden Maintenance project in Huddersfield and surrounding areas", "original": "a_bright_glossy_promotional_collage_for_garden_cl.png"}, {"src": "assets/project-23.webp", "title": "Garden Maintenance", "category": "Garden Maintenance", "alt": "Garden Maintenance project in Huddersfield and surrounding areas", "original": "a_bright_professional_landscaping_before_and_afte.png"}, {"src": "assets/project-24.webp", "title": "Recent Projects", "category": "Recent Projects", "alt": "Recent Projects project in Huddersfield and surrounding areas", "original": "a_clean_professional_advertisement_style_before_a.png"}, {"src": "assets/project-25.webp", "title": "Garden Maintenance", "category": "Garden Maintenance", "alt": "Garden Maintenance project in Huddersfield and surrounding areas", "original": "a_clean_professional_before_and_after_landscapi.png"}, {"src": "assets/project-26.webp", "title": "Recent Projects", "category": "Recent Projects", "alt": "Recent Projects project in Huddersfield and surrounding areas", "original": "a_clean_professional_before_and_after_service_p.png"}, {"src": "assets/project-27.webp", "title": "Recent Projects", "category": "Recent Projects", "alt": "Recent Projects project in Huddersfield and surrounding areas", "original": "a_crisp_high_resolution_after_promotional_photo.png"}, {"src": "assets/project-28.webp", "title": "Driveway & Patio Cleaning", "category": "Driveway & Patio Cleaning", "alt": "Driveway & Patio Cleaning project in Huddersfield and surrounding areas", "original": "a_crisp_professional_after_cleaning_outdoor_dri.png"}, {"src": "assets/project-29.webp", "title": "Driveway & Patio Cleaning", "category": "Driveway & Patio Cleaning", "alt": "Driveway & Patio Cleaning project in Huddersfield and surrounding areas", "original": "a_crisp_professional_after_cleaning_service_pho.png"}, {"src": "assets/project-30.webp", "title": "Recent Projects", "category": "Recent Projects", "alt": "Recent Projects project in Huddersfield and surrounding areas", "original": "a_crisp_professional_before_after_marketing_i.png"}, {"src": "assets/project-31.webp", "title": "Recent Projects", "category": "Recent Projects", "alt": "Recent Projects project in Huddersfield and surrounding areas", "original": "a_crisp_professional_collage_grid_of_9_before_and.png"}, {"src": "assets/project-32.webp", "title": "Recent Projects", "category": "Recent Projects", "alt": "Recent Projects project in Huddersfield and surrounding areas", "original": "a_crisp_professionally_edited_before_and_after.png"}, {"src": "assets/project-33.webp", "title": "Driveway & Patio Cleaning", "category": "Driveway & Patio Cleaning", "alt": "Driveway & Patio Cleaning project in Huddersfield and surrounding areas", "original": "a_high_resolution_wide_angle_after_cleaning_pho.png"}, {"src": "assets/project-34.webp", "title": "Recent Projects", "category": "Recent Projects", "alt": "Recent Projects project in Huddersfield and surrounding areas", "original": "a_high_resolution_wide_angle_before_after_pro.png"}, {"src": "assets/project-35.webp", "title": "Garden Maintenance", "category": "Garden Maintenance", "alt": "Garden Maintenance project in Huddersfield and surrounding areas", "original": "a_professional_clean_before_and_after_landscapi.png"}, {"src": "assets/project-36.webp", "title": "Recent Projects", "category": "Recent Projects", "alt": "Recent Projects project in Huddersfield and surrounding areas", "original": "a_professional_collage_like_promotional_photo_bef.png"}, {"src": "assets/project-37.webp", "title": "Recent Projects", "category": "Recent Projects", "alt": "Recent Projects project in Huddersfield and surrounding areas", "original": "a_professional_collage_style_photo_a_3x3_grid_of.png"}, {"src": "assets/project-38.webp", "title": "Recent Projects", "category": "Recent Projects", "alt": "Recent Projects project in Huddersfield and surrounding areas", "original": "a_professional_commercial_before_and_after_photo_o.png"}, {"src": "assets/project-39.webp", "title": "Recent Projects", "category": "Recent Projects", "alt": "Recent Projects project in Huddersfield and surrounding areas", "original": "a_professional_high_contrast_promotional_before.png"}, {"src": "assets/project-40.webp", "title": "Recent Projects", "category": "Recent Projects", "alt": "Recent Projects project in Huddersfield and surrounding areas", "original": "a_professional_high_resolution_collage_style_befo.png"}, {"src": "assets/project-41.webp", "title": "Garden Maintenance", "category": "Garden Maintenance", "alt": "Garden Maintenance project in Huddersfield and surrounding areas", "original": "a_professional_landscape_service_promotional_befo.png"}, {"src": "assets/project-42.webp", "title": "Recent Projects", "category": "Recent Projects", "alt": "Recent Projects project in Huddersfield and surrounding areas", "original": "a_professional_marketing_before_and_after_collag.png"}, {"src": "assets/project-43.webp", "title": "Recent Projects", "category": "Recent Projects", "alt": "Recent Projects project in Huddersfield and surrounding areas", "original": "a_professional_photorealistic_before_and_after_co.png"}, {"src": "assets/project-44.webp", "title": "Recent Projects", "category": "Recent Projects", "alt": "Recent Projects project in Huddersfield and surrounding areas", "original": "a_professional_promotional_before_and_after_clea.png"}, {"src": "assets/project-45.webp", "title": "Recent Projects", "category": "Recent Projects", "alt": "Recent Projects project in Huddersfield and surrounding areas", "original": "a_professional_promotional_before_and_after_landsc.png"}, {"src": "assets/project-46.webp", "title": "Recent Projects", "category": "Recent Projects", "alt": "Recent Projects project in Huddersfield and surrounding areas", "original": "a_professional_promotional_collage_before_and_aft.png"}, {"src": "assets/project-47.webp", "title": "Recent Projects", "category": "Recent Projects", "alt": "Recent Projects project in Huddersfield and surrounding areas", "original": "a_professional_promotional_collage_poster_for_a_ga.png"}, {"src": "assets/project-48.webp", "title": "Recent Projects", "category": "Recent Projects", "alt": "Recent Projects project in Huddersfield and surrounding areas", "original": "a_wide_clean_professional_marketing_before_and.png"}, {"src": "assets/project-49.webp", "title": "Driveway Cleaning", "category": "Driveway & Patio Cleaning", "alt": "Driveway Cleaning project in Huddersfield and surrounding areas", "original": "a_wide_professional_before_and_after_driveway_c.png"}, {"src": "assets/project-50.webp", "title": "Recent Projects", "category": "Recent Projects", "alt": "Recent Projects project in Huddersfield and surrounding areas", "original": "b008b3fb-2032-43b6-9e4a-c89d063df28b.jpeg"}, {"src": "assets/project-51.webp", "title": "Recent Projects", "category": "Recent Projects", "alt": "Recent Projects project in Huddersfield and surrounding areas", "original": "BBA7E0E7-78F6-4FE9-8FD9-75275E61B685.jpeg"}, {"src": "assets/project-52.webp", "title": "Recent Projects", "category": "Recent Projects", "alt": "Recent Projects project in Huddersfield and surrounding areas", "original": "C05EF74E-2105-46DC-8424-683E789AC0F9.jpeg"}, {"src": "assets/project-53.webp", "title": "Recent Projects", "category": "Recent Projects", "alt": "Recent Projects project in Huddersfield and surrounding areas", "original": "DBA9CCF4-9A7D-4E78-8F2A-C221D89F06A6.jpeg"}, {"src": "assets/project-54.webp", "title": "Recent Projects", "category": "Recent Projects", "alt": "Recent Projects project in Huddersfield and surrounding areas", "original": "ede391e3-4647-4c45-b583-4e0fc64516de.jpeg"}, {"src": "assets/project-55.webp", "title": "Recent Projects", "category": "Recent Projects", "alt": "Recent Projects project in Huddersfield and surrounding areas", "original": "f82f7aab-0231-463e-9833-24bc6f79f327.jpeg"}];
-const gallery=document.getElementById('galleryGrid');
-function renderGallery(filter='all'){
- const items=PROJECTS.filter(p=>filter==='all'||p.category===filter);
- gallery.innerHTML=items.map((p,i)=>`<a class="gallery-item" href="${p.src}" target="_blank" rel="noopener" aria-label="Open ${p.title} photo"><img loading="lazy" src="${p.src}" alt="${p.alt}"><span class="gallery-overlay">${p.title} ↗</span></a>`).join('');
+/* =========================================================
+   HUDDERSFIELD GARDENING, DRIVEWAY & PATIO CLEANING
+   Complete Website JavaScript
+   Gallery | Mobile Navigation | 3D Effects
+   WhatsApp Quotes | Rule-Based Chatbot
+   ========================================================= */
+
+"use strict";
+
+// =========================================================
+// 1. GENERAL UTILITIES
+// =========================================================
+
+const $ = (selector, parent = document) =>
+    parent.querySelector(selector);
+
+const $$ = (selector, parent = document) =>
+    Array.from(parent.querySelectorAll(selector));
+
+function escapeHTML(value) {
+    return String(value ?? "").replace(/[&<>"']/g, char => ({
+        "&": "&amp;",
+        "<": "&lt;",
+        ">": "&gt;",
+        '"': "&quot;",
+        "'": "&#39;"
+    })[char]);
 }
-renderGallery();
-document.querySelectorAll('.filter').forEach(btn=>btn.addEventListener('click',()=>{document.querySelectorAll('.filter').forEach(b=>b.classList.remove('active'));btn.classList.add('active');renderGallery(btn.dataset.filter)}));
-// Mobile navigation
-const menu=document.querySelector('.menu-toggle'),nav=document.querySelector('.main-nav');menu.addEventListener('click',()=>{const open=nav.classList.toggle('open');menu.setAttribute('aria-expanded',open?'true':'false')});nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));
-// 3D hover tilt on larger screens
-if(matchMedia('(hover:hover) and (min-width:900px)').matches){document.querySelectorAll('.tilt').forEach(card=>{card.addEventListener('mousemove',e=>{const r=card.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;card.style.transform=`perspective(900px) rotateX(${-y*5}deg) rotateY(${x*5}deg) translateY(-5px)`});card.addEventListener('mouseleave',()=>card.style.transform='')})}
-// Quote form creates a pre-filled WhatsApp message; visitor chooses to send it.
-document.getElementById('quoteForm').addEventListener('submit',async e=>{e.preventDefault();const d=Object.fromEntries(new FormData(e.target).entries());const msg=`Hello, I would like a free quotation.\nName: ${d.name}\nPhone: ${d.phone}\nService: ${d.service}\nPostcode/Area: ${d.postcode||'Not provided'}\nJob details: ${d.details||'Please contact me to discuss.'}`;const wa='https://wa.me/447971312070?text='+encodeURIComponent(msg);try{const res=await fetch('/api/enquiries',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(d)});if(!res.ok)throw new Error('API unavailable');}catch(err){console.info('Enquiry API unavailable; continuing to WhatsApp.')}window.open(wa,'_blank','noopener')});
-document.querySelectorAll('[data-service]').forEach(a=>a.addEventListener('click',()=>{const s=document.querySelector('[name="service"]');if(s){for(const o of s.options)if(o.text===a.dataset.service)s.value=o.value}}));
-document.getElementById('year').textContent=new Date().getFullYear();
-// Rule-based chatbot: fixed intent matching and quick-reply flows, no external AI or data service.
-const panel=document.getElementById('chatPanel'),launcher=document.getElementById('chatLauncher'),close=document.getElementById('chatClose'),messages=document.getElementById('chatMessages'),quick=document.getElementById('quickReplies');
-function openChat(){panel.classList.add('open');panel.setAttribute('aria-hidden','false')};function closeChat(){panel.classList.remove('open');panel.setAttribute('aria-hidden','true')};launcher.addEventListener('click',openChat);close.addEventListener('click',closeChat);
-function addMsg(text,who='bot'){const el=document.createElement('div');el.className=who==='user'?'user-msg':'bot-msg';el.textContent=text;messages.appendChild(el);messages.scrollTop=messages.scrollHeight}
-const answers={services:`We can help with:
-• Garden maintenance and grass cutting
-• Tree cutting and hedge trimming/reduction
-• Fencing, replacement and repairs
+
+// =========================================================
+// 2. PROJECT GALLERY
+// Loads all projects from gallery.json
+// =========================================================
+
+const gallery = $("#galleryGrid");
+
+let PROJECTS = [];
+
+const IMAGE_BASE_PATHS = [
+    "",
+    "assets/"
+];
+
+function getImageCandidates(src) {
+
+    const filename = String(src || "").split("/").pop();
+
+    if (!filename) return [];
+
+    const candidates = [
+        filename,
+        `assets/${filename}`,
+        String(src).replace(/^\/+/, "")
+    ];
+
+    return [...new Set(candidates)];
+}
+
+function loadGalleryImage(img, candidates, index = 0) {
+
+    if (!candidates.length || index >= candidates.length) {
+
+        img.classList.add("image-load-failed");
+        img.alt = "Project image currently unavailable";
+
+        const card = img.closest(".gallery-item");
+
+        if (card) {
+            card.classList.add("image-unavailable");
+            card.setAttribute("aria-label", "Project image unavailable");
+        }
+
+        console.error("Unable to load gallery image:", candidates);
+
+        return;
+    }
+
+    const nextPath = candidates[index];
+
+    img.dataset.currentImagePath = nextPath;
+
+    img.onerror = () => {
+        loadGalleryImage(img, candidates, index + 1);
+    };
+
+    img.onload = () => {
+
+        img.classList.remove("image-load-failed");
+
+        const card = img.closest(".gallery-item");
+
+        if (card) {
+            card.href = img.src;
+            card.classList.remove("image-unavailable");
+        }
+    };
+
+    img.src = nextPath;
+}
+
+function renderGallery(filter = "all") {
+
+    if (!gallery) {
+        console.warn("Gallery element #galleryGrid was not found.");
+        return;
+    }
+
+    const items = PROJECTS.filter(project => {
+
+        return filter === "all" ||
+            project.category === filter;
+
+    });
+
+    if (!items.length) {
+
+        gallery.innerHTML = `
+            <div class="gallery-empty">
+                <p>No projects found in this category.</p>
+            </div>
+        `;
+
+        return;
+    }
+
+    gallery.innerHTML = items.map((project, index) => {
+
+        const title = escapeHTML(project.title);
+        const alt = escapeHTML(project.alt || project.title);
+        const category = escapeHTML(project.category);
+
+        return `
+            <a
+                class="gallery-item"
+                href="#gallery"
+                data-project-index="${index}"
+                aria-label="View ${title}"
+            >
+                <img
+                    src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+                    alt="${alt}"
+                    loading="lazy"
+                    decoding="async"
+                    data-project-src="${escapeHTML(project.src)}"
+                >
+
+                <span class="gallery-overlay">
+                    ${title} ↗
+                </span>
+
+            </a>
+        `;
+
+    }).join("");
+
+    // Load images using automatic fallback.
+    $$("img[data-project-src]", gallery).forEach(img => {
+
+        const candidates = getImageCandidates(
+            img.dataset.projectSrc
+        );
+
+        loadGalleryImage(img, candidates);
+
+    });
+
+}
+
+// Load project data from gallery.json.
+async function initializeGallery() {
+
+    if (!gallery) return;
+
+    try {
+
+        const response = await fetch("./gallery.json", {
+            cache: "no-cache"
+        });
+
+        if (!response.ok) {
+            throw new Error(
+                `Gallery file returned HTTP ${response.status}`
+            );
+        }
+
+        const data = await response.json();
+
+        if (!Array.isArray(data)) {
+            throw new Error("gallery.json must contain an array.");
+        }
+
+        PROJECTS = data;
+
+        console.log(
+            `Successfully loaded ${PROJECTS.length} gallery projects.`
+        );
+
+        renderGallery("all");
+
+    } catch (error) {
+
+        console.error("Gallery loading failed:", error);
+
+        gallery.innerHTML = `
+            <div class="gallery-empty">
+                <p>Our project gallery is temporarily unavailable.</p>
+                <p>Please contact us for recent project photographs.</p>
+            </div>
+        `;
+
+    }
+
+}
+
+// Gallery category filters.
+function initializeGalleryFilters() {
+
+    $$(".filter").forEach(button => {
+
+        button.addEventListener("click", () => {
+
+            $$(".filter").forEach(item => {
+                item.classList.remove("active");
+            });
+
+            button.classList.add("active");
+
+            renderGallery(button.dataset.filter || "all");
+
+        });
+
+    });
+
+}
+
+initializeGallery();
+initializeGalleryFilters();
+
+
+// =========================================================
+// 3. MOBILE NAVIGATION
+// =========================================================
+
+const menuToggle = $(".menu-toggle");
+const mainNav = $(".main-nav");
+
+if (menuToggle && mainNav) {
+
+    menuToggle.addEventListener("click", () => {
+
+        const isOpen = mainNav.classList.toggle("open");
+
+        menuToggle.setAttribute(
+            "aria-expanded",
+            String(isOpen)
+        );
+
+    });
+
+    $$("a", mainNav).forEach(link => {
+
+        link.addEventListener("click", () => {
+
+            mainNav.classList.remove("open");
+
+            menuToggle.setAttribute(
+                "aria-expanded",
+                "false"
+            );
+
+        });
+
+    });
+
+}
+
+
+// =========================================================
+// 4. PROFESSIONAL 3D HOVER EFFECTS
+// =========================================================
+
+if (
+    window.matchMedia(
+        "(hover: hover) and (min-width: 900px)"
+    ).matches
+) {
+
+    $$(".tilt").forEach(card => {
+
+        card.addEventListener("mousemove", event => {
+
+            const rect = card.getBoundingClientRect();
+
+            const x =
+                (event.clientX - rect.left) / rect.width - 0.5;
+
+            const y =
+                (event.clientY - rect.top) / rect.height - 0.5;
+
+            card.style.transform = `
+                perspective(900px)
+                rotateX(${-y * 5}deg)
+                rotateY(${x * 5}deg)
+                translateY(-5px)
+            `;
+
+        });
+
+        card.addEventListener("mouseleave", () => {
+
+            card.style.transform = "";
+
+        });
+
+    });
+
+}
+
+
+// =========================================================
+// 5. WHATSAPP QUOTATION FORM
+// =========================================================
+
+const quoteForm = $("#quoteForm");
+
+if (quoteForm) {
+
+    quoteForm.addEventListener("submit", async event => {
+
+        event.preventDefault();
+
+        const formData = Object.fromEntries(
+            new FormData(quoteForm).entries()
+        );
+
+        const name = formData.name || "";
+        const phone = formData.phone || "";
+        const service = formData.service || "";
+        const postcode = formData.postcode || "Not provided";
+        const details = formData.details || "Not provided";
+
+        const message = `
+Hello, I would like a free quotation.
+
+Name: ${name}
+Phone: ${phone}
+Service: ${service}
+Postcode / Area: ${postcode}
+Job Details: ${details}
+
+Please contact me regarding this enquiry.
+        `.trim();
+
+        const whatsappURL =
+            "https://wa.me/447971312070?text=" +
+            encodeURIComponent(message);
+
+        // Open WhatsApp immediately from the user interaction.
+        window.open(
+            whatsappURL,
+            "_blank",
+            "noopener,noreferrer"
+        );
+
+        // Optional enquiry API.
+        // WhatsApp remains available if the API is not configured.
+        try {
+
+            const response = await fetch("/api/enquiries", {
+
+                method: "POST",
+
+                headers: {
+                    "Content-Type": "application/json"
+                },
+
+                body: JSON.stringify(formData)
+
+            });
+
+            if (!response.ok) {
+                throw new Error("Enquiry API unavailable.");
+            }
+
+            console.log("Enquiry submitted successfully.");
+
+        } catch (error) {
+
+            console.info(
+                "Online enquiry storage is not configured. " +
+                "The WhatsApp quotation request is still available.",
+                error
+            );
+
+        }
+
+    });
+
+}
+
+
+// =========================================================
+// 6. SERVICE BUTTONS
+// =========================================================
+
+$$("[data-service]").forEach(button => {
+
+    button.addEventListener("click", () => {
+
+        const serviceSelect = $('[name="service"]');
+
+        if (!serviceSelect) return;
+
+        const selectedService = button.dataset.service;
+
+        for (const option of serviceSelect.options) {
+
+            if (
+                option.text.trim().toLowerCase() ===
+                selectedService.trim().toLowerCase()
+            ) {
+
+                serviceSelect.value = option.value;
+                break;
+
+            }
+
+        }
+
+    });
+
+});
+
+
+// =========================================================
+// 7. AUTOMATIC COPYRIGHT YEAR
+// =========================================================
+
+const yearElement = $("#year");
+
+if (yearElement) {
+
+    yearElement.textContent = new Date().getFullYear();
+
+}
+
+
+// =========================================================
+// 8. RULE-BASED CUSTOMER SUPPORT CHATBOT
+// No external AI API required.
+// =========================================================
+
+const chatPanel = $("#chatPanel");
+const chatLauncher = $("#chatLauncher");
+const chatClose = $("#chatClose");
+const chatMessages = $("#chatMessages");
+const quickReplies = $("#quickReplies");
+
+function openChat() {
+
+    if (!chatPanel) return;
+
+    chatPanel.classList.add("open");
+
+    chatPanel.setAttribute("aria-hidden", "false");
+
+}
+
+function closeChat() {
+
+    if (!chatPanel) return;
+
+    chatPanel.classList.remove("open");
+
+    chatPanel.setAttribute("aria-hidden", "true");
+
+}
+
+if (chatLauncher) {
+    chatLauncher.addEventListener("click", openChat);
+}
+
+if (chatClose) {
+    chatClose.addEventListener("click", closeChat);
+}
+
+
+// =========================================================
+// 9. CHATBOT MESSAGE HANDLING
+// =========================================================
+
+function addMessage(message, sender = "bot") {
+
+    if (!chatMessages) return;
+
+    const element = document.createElement("div");
+
+    element.className =
+        sender === "user" ? "user-msg" : "bot-msg";
+
+    element.textContent = message;
+
+    chatMessages.appendChild(element);
+
+    chatMessages.scrollTop =
+        chatMessages.scrollHeight;
+
+}
+
+
+// =========================================================
+// 10. CHATBOT KNOWLEDGE BASE
+// =========================================================
+
+const chatbotAnswers = {
+
+    greeting:
+        "Hello! Welcome to Huddersfield Gardening, Driveway and Patio Cleaning Service. How can we help you today?",
+
+    services:
+        `We provide a range of outdoor property services:
+
+• Garden maintenance
+• Grass cutting and lawn care
+• Tree cutting and removal
+• Hedge trimming and reduction
+• Fencing installation and repairs
 • Decking enquiries
-• Driveway and patio cleaning
+• Driveway cleaning
+• Patio cleaning
 • Weed and moss removal
-Which service are you interested in?`,quote:'For a free, no-obligation quotation, call 07971 312070 or use the quote form on this page. Photos and your postcode can help us understand the job.',area:'We are based around Huddersfield and consider enquiries from surrounding areas. Send your postcode and the work required so we can confirm whether we cover your location.',contact:'Call 07971 312070 or message us on WhatsApp: https://wa.me/447971312070. You can also use the quote form on this page.',fencing:'We handle enquiries for new fencing, replacing old or broken fences, fence repairs and decking. Use the quote form and choose “Fencing & Decking”.',driveway:'We offer driveway and patio cleaning enquiries, including suitable paved and block-paved surfaces. The right approach depends on the surface and its condition.',garden:'Garden services include general maintenance, grass cutting, weed control, hedge care and garden tidy-ups. Tell us what needs doing for a tailored quote.',tree:'We take enquiries for tree cutting/removal, hedge trimming and reduction, and stump/root work. The exact scope depends on access, tree size and site conditions.',hours:'Please call or WhatsApp to check current availability and arrange a suitable time. We do not publish fixed opening hours here.'};
-function reply(q){const t=q.toLowerCase();if(/service|what do you do|offer/.test(t))return answers.services;if(/quote|price|cost|estimate|how much/.test(t))return answers.quote;if(/area|cover|postcode|location|where/.test(t))return answers.area;if(/contact|phone|call|whatsapp|number/.test(t))return answers.contact;if(/fenc|deck/.test(t))return answers.fencing;if(/drive|patio|pressure|wash|clean/.test(t))return answers.driveway;if(/garden|grass|lawn|weed|moss/.test(t))return answers.garden;if(/tree|hedge|stump|root/.test(t))return answers.tree;if(/hour|open|available|availability|when/.test(t))return answers.hours;if(/hello|hi|hey|good morning|good afternoon/.test(t))return 'Hello! I can help with services, quotes, coverage and contact details. What would you like to know?';return 'Thanks for your message. I can help with services, quotes, areas covered or contact details. For a specific job, call 07971 312070 or use the quote form so the team can review your enquiry.'}
-function ask(q){if(!q.trim())return;addMsg(q,'user');setTimeout(()=>addMsg(reply(q)),180)}
-quick.querySelectorAll('button').forEach(b=>b.addEventListener('click',()=>ask(b.textContent)));document.getElementById('chatForm').addEventListener('submit',e=>{e.preventDefault();const input=document.getElementById('chatText');ask(input.value);input.value=''});
+• Garden clearance
+
+Which service are you interested in?`,
+
+    quote:
+        "We offer free quotation enquiries. Call 07971 312070 or send us a WhatsApp message. You can also complete the quotation form on our website.",
+
+    area:
+        "We are based around Huddersfield and consider enquiries from surrounding areas. Please send us your postcode so we can confirm availability in your location.",
+
+    contact:
+        "You can contact our team on 07971 312070 or WhatsApp us at https://wa.me/447971312070.",
+
+    fencing:
+        "We provide enquiries for garden fencing installation, replacement, repairs and removal of old fencing. Contact us for a free quotation.",
+
+    driveway:
+        "We provide driveway and patio cleaning services, helping remove surface dirt, moss and algae. Contact us to discuss your cleaning requirements.",
+
+    garden:
+        "Our garden maintenance services include grass cutting, lawn care, hedge trimming, weed removal, garden tidy-ups and general maintenance.",
+
+    tree:
+        "We handle enquiries for tree cutting, tree removal, hedge trimming, hedge reduction and stump or root removal. The work depends on site access and requirements.",
+
+    hours:
+        "Please call or WhatsApp us to check current availability and arrange a suitable appointment.",
+
+    thanks:
+        "You're welcome! Thank you for contacting Huddersfield Gardening. We look forward to helping you.",
+
+    fallback:
+        "Thank you for your message. I can help with our services, quotations, service areas and contact details. For specific enquiries, please call 07971 312070."
+
+};
+
+
+// =========================================================
+// 11. CHATBOT INTENT DETECTION
+// =========================================================
+
+function getChatbotReply(question) {
+
+    const text = question.toLowerCase().trim();
+
+    if (
+        /^(hi|hello|hey|good morning|good afternoon|good evening)/i
+            .test(text)
+    ) {
+        return chatbotAnswers.greeting;
+    }
+
+    if (
+        /thank|thanks|cheers/.test(text)
+    ) {
+        return chatbotAnswers.thanks;
+    }
+
+    if (
+        /service|services|what do you do|what do you offer/.test(text)
+    ) {
+        return chatbotAnswers.services;
+    }
+
+    if (
+        /quote|quotation|price|cost|estimate|how much/.test(text)
+    ) {
+        return chatbotAnswers.quote;
+    }
+
+    if (
+        /area|location|postcode|cover|coverage|where/.test(text)
+    ) {
+        return chatbotAnswers.area;
+    }
+
+    if (
+        /contact|phone|call|number|whatsapp|telephone/.test(text)
+    ) {
+        return chatbotAnswers.contact;
+    }
+
+    if (
+        /fenc|deck/.test(text)
+    ) {
+        return chatbotAnswers.fencing;
+    }
+
+    if (
+        /driveway|patio|pressure wash|cleaning|clean/.test(text)
+    ) {
+        return chatbotAnswers.driveway;
+    }
+
+    if (
+        /garden|grass|lawn|weed|moss|maintenance/.test(text)
+    ) {
+        return chatbotAnswers.garden;
+    }
+
+    if (
+        /tree|hedge|stump|root|cutting|removal/.test(text)
+    ) {
+        return chatbotAnswers.tree;
+    }
+
+    if (
+        /opening|hours|available|availability|open|appointment/.test(text)
+    ) {
+        return chatbotAnswers.hours;
+    }
+
+    return chatbotAnswers.fallback;
+
+}
+
+
+// =========================================================
+// 12. CHATBOT CONVERSATION
+// =========================================================
+
+function sendChatMessage(question) {
+
+    if (!question || !question.trim()) return;
+
+    addMessage(question, "user");
+
+    const answer = getChatbotReply(question);
+
+    window.setTimeout(() => {
+
+        addMessage(answer, "bot");
+
+    }, 250);
+
+}
+
+if (quickReplies) {
+
+    $$("button", quickReplies).forEach(button => {
+
+        button.addEventListener("click", () => {
+
+            sendChatMessage(button.textContent);
+
+        });
+
+    });
+
+}
+
+
+// =========================================================
+// 13. CHATBOT INPUT FORM
+// =========================================================
+
+const chatForm = $("#chatForm");
+const chatInput = $("#chatText");
+
+if (chatForm && chatInput) {
+
+    chatForm.addEventListener("submit", event => {
+
+        event.preventDefault();
+
+        const message = chatInput.value.trim();
+
+        if (!message) return;
+
+        sendChatMessage(message);
+
+        chatInput.value = "";
+
+        chatInput.focus();
+
+    });
+
+}
+
+
+// =========================================================
+// 14. INITIALIZATION COMPLETE
+// =========================================================
+
+console.log(
+    "%cHuddersfield Gardening Website",
+    "color:#16a34a;font-size:18px;font-weight:bold;"
+);
+
+console.log(
+    "Website JavaScript initialized successfully."
+);
